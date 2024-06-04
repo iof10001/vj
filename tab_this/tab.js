@@ -1,19 +1,21 @@
 window.onload = function(){
+//화면이 다 로딩되면 실행한다.
   const tabbtn = document.querySelectorAll("#tab li");
   // li들 저장
 
 
   tabbtn.forEach(function(ele, idx){
-    //li들 각각 명령선언
+    //그 li들 각각 명령선언
        
         ele.addEventListener('click', function(){
             //li가 클릭되었을때 처리될 명령
 
             const hrefValue = this.querySelector('a').getAttribute('href');
+            
             //this는 클릭한 li이기 때문에 그 안의 a태그를 먼저 선택하고 
             //그 속성 href의 값을 가져와서 hrefValue에 저장한다.
             const targetele = document.querySelector(hrefValue);
-            //href값과 일치하는 객체 저장
+            //href값과 일치하는 객체 저장(아래 컨텐츠중 선택됨)
           
 
             const t_sibligns =  document.querySelectorAll(".content > div");
